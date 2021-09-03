@@ -1,0 +1,24 @@
+apiVersion: kontinue.io/v1alpha1
+kind: Workload
+metadata:
+  name: spring-webdb
+  labels:
+    app.kubernetes.io/name: spring-webdb
+    app.tanzu.vmware.com/workload-type: web
+spec:
+  source:
+    git:
+      # update when code is pushed to a new location
+      url: https://github.com/tanzu-end-to-end/spring-sensors.git
+      ref:
+        branch: main
+  env:
+  - name: TESTVAR
+    value: aoeu
+  resources:
+    requests:
+      memory: 1Gi
+      cpu: 100m
+    limits:
+      memory: 1Gi
+      cpu: 4000m
