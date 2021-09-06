@@ -9,7 +9,7 @@ spec:
   source:
     git:
       # update when code is pushed to a new location
-      url: https://github.com/tanzu-end-to-end/spring-sensors.git
+      url: $GITREPO
       ref:
         branch: main
   env:
