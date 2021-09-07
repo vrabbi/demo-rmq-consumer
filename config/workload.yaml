@@ -12,7 +12,6 @@ spec:
       url: $GITREPO
       ref:
         branch: main
-  imageTarget: $IMAGE_TARGET
   env:
   - name: TESTVAR
     value: aoeu
