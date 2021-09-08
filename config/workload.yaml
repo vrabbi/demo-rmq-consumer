@@ -1,9 +1,9 @@
 apiVersion: kontinue.io/v1alpha1
 kind: Workload
 metadata:
-  name: spring-webdb
+  name: spring-sensors
   labels:
-    app.kubernetes.io/name: spring-webdb
+    app.kubernetes.io/name: spring-sensors
     app.tanzu.vmware.com/workload-type: web
 spec:
   source:
