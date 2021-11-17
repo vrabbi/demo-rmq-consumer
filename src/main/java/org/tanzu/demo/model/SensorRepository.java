@@ -2,5 +2,7 @@ package org.tanzu.demo.model;
 
 import org.springframework.data.repository.CrudRepository;
 
-public interface SensorRepository extends CrudRepository<Sensor, Integer> {
+import java.util.UUID;
+
+public interface SensorRepository extends CrudRepository<Sensor, UUID> {
 }

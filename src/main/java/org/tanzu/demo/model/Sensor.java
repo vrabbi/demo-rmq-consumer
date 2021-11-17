@@ -3,33 +3,28 @@ package org.tanzu.demo.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.util.UUID;
 
 @Entity
 public class Sensor {
 
     @Id
-    @GeneratedValue
-    int id;
-    int temperature;
-    int pressure;
+    UUID id;
+    double temperature;
+    double pressure;
 
     public Sensor() {
     }
 
-    public Sensor(int temperature, int pressure) {
-        this.temperature = temperature;
-        this.pressure = pressure;
-    }
-
-    public int getId() {
+    public UUID getId() {
         return id;
     }
 
-    public int getTemperature() {
+    public double getTemperature() {
         return temperature;
     }
 
-    public int getPressure() {
+    public double getPressure() {
         return pressure;
     }
 }

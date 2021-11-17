@@ -11,4 +11,10 @@ spec:
       url: $GITREPO
       ref:
         branch: main
+  serviceClaims:
+    - name: rmq
+      ref:
+        apiVersion: rabbitmq.com/v1beta1
+        kind: RabbitmqCluster
+        name: rmq-tsalm-1
 
