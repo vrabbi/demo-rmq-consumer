@@ -4,24 +4,22 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
-import org.tanzu.demo.model.Sensor;
-import org.tanzu.demo.model.SensorRepository;
 
 import java.util.function.Consumer;
 
 @Component
-public class SensorDataSink {
+public class SensorsDataSink {
 
-    private final Logger log = LoggerFactory.getLogger(SensorDataSink.class);
+    private final Logger log = LoggerFactory.getLogger(SensorsDataSink.class);
 
     private final SensorRepository sensorRepository;
 
-    public SensorDataSink(final SensorRepository sensorRepository) {
+    public SensorsDataSink(final SensorRepository sensorRepository) {
         this.sensorRepository = sensorRepository;
     }
 
     @Bean
-    public Consumer<Sensor> receiveSensorData() {
+    public Consumer<SensorData> receiveSensorData() {
         return sensorData -> {
             log.info("Received sensor data: {}", sensorData);
             sensorRepository.save(sensorData);

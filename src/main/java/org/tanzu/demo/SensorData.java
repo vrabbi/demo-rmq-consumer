@@ -1,19 +1,18 @@
-package org.tanzu.demo.model;
+package org.tanzu.demo;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.util.UUID;
 
 @Entity
-public class Sensor {
+public class SensorData {
 
     @Id
-    UUID id;
-    double temperature;
-    double pressure;
+    private UUID id;
+    private double temperature;
+    private double pressure;
 
-    public Sensor() {
+    public SensorData() {
     }
 
     public UUID getId() {

@@ -16,5 +16,5 @@ spec:
       ref:
         apiVersion: rabbitmq.com/v1beta1
         kind: RabbitmqCluster
-        name: rmq-tsalm-1
+        name: rmq-1
 
