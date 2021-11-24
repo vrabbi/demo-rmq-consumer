@@ -15,6 +15,12 @@ public class SensorData {
     public SensorData() {
     }
 
+    public SensorData(UUID id, double temperature, double pressure) {
+        this.id = id;
+        this.temperature = temperature;
+        this.pressure = pressure;
+    }
+
     public UUID getId() {
         return id;
     }
