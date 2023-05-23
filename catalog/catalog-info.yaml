@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: demo-rmq-consumer
+  description: Spring Sensors Rabbit Consumer
+  tags:
+    - app-accelerator
+    - java
+    - spring
+    - tanzu
+  annotations:
+    'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=demo-rmq-consumer'
+spec:
+  type: service
+  lifecycle: experimental
+  owner: default-team
