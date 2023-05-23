@@ -9,7 +9,7 @@ spec:
     git:
       url: https://github.com/vrabbi/demo-rmq-consumer.git
       ref:
-        branch: main
+        branch: rabbit
   serviceClaims:
     - name: rmq
       ref:
